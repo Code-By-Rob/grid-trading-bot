@@ -21,20 +21,6 @@ require('dotenv').config();
     let initialBuyOrder = await exchange.createMarketOrder(config.symbol, "buy", config.positionSize * config.numSellGridLines);
     console.log(initialBuyOrder);
 
-    // console.log(`Initial buy order of: ${(ticker['bid'] * config.positionSize) * config.numSellGridLines}`);
-    // console.log('-----------------------------------------------------------');
-    // for (let i = 1; i <= config.numBuyGridLines; i++) {
-    //     let price = ticker['bid'] - (config.gridSize * i);
-    //     console.log(`submitting market limit buy order at: ${price} position: ${(ticker['bid'] - (config.gridSize * i)) * positionSize}`);
-    // }
-    // console.log('-----------------------------------------------------------');
-    // for (let i = 1; i <= config.numSellGridLines; i++) {
-    //     let price = ticker['bid'] + (config.gridSize * i);
-    //     console.log(`submitting market limit sell order at ${price} position: ${(ticker['bid'] + (config.gridSize * i)) * positionSize}`);
-    // }
-
-    // process.exit(1);
-
     console.log(`Initial buy order of: ${(ticker['bid'] * config.positionSize) * config.numSellGridLines}`);
     console.log('-----------------------------------------------------------');
     for (let i = 1; i <= config.numBuyGridLines; i++) {
